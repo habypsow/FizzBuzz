@@ -1,16 +1,11 @@
-
-
 import main.java.FizzBuzz;
-import org.junit.Before;
-import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-
+import org.junit.Before;
+import org.junit.Test;
 
 public class FizzBuzzTest {
     private FizzBuzz fizzBuzz;
@@ -38,6 +33,13 @@ public class FizzBuzzTest {
     public void printOutputWhenInputIsFive() {
         List<String> expectedOutput = Arrays.asList("1", "2", "fizz", "4", "buzz");
         List<String> methodOutput = fizzBuzz.fizzBuzz(5);
+        assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void printOutputWhenInputIsFifteen() {
+        List<String> expectedOutput = Arrays.asList("1", "2", "fizz", "4", "buzz", "fizz", "7", "8", "fizz", "buzz", "11", "fizz", "13", "14", "fizzbuzz");
+        List<String> methodOutput = fizzBuzz.fizzBuzz(15);
         assertEquals(expectedOutput, methodOutput);
     }
 }

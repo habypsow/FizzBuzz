@@ -10,17 +10,16 @@ public class FizzBuzz {
         for (int i = 1; i <= number; i++) {
             boolean divisibleByThree = (i % 3 == 0);
             boolean divisibleByFive = (i % 5 == 0);
-            if (divisibleByThree) {
+            if (divisibleByThree && divisibleByFive) {
+                result.add("fizzbuzz");
+            } else if (divisibleByThree) {
                 result.add("fizz");
             } else if (divisibleByFive) {
-               result.add("buzz");
+                result.add("buzz");
             } else {
                 result.add(Integer.toString(i));
             }
         }
-
-
-       // result.add(str);
         return result;
     }
 }
