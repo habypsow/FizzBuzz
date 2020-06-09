@@ -33,4 +33,11 @@ public class FizzBuzzTest {
         List<String> methodOutput = fizzBuzz.fizzBuzz(3);
         assertEquals(expectedOutput, methodOutput);
     }
+
+    @Test
+    public void printOutputWhenInputIsFive() {
+        List<String> expectedOutput = Arrays.asList("1", "2", "fizz", "4", "buzz");
+        List<String> methodOutput = fizzBuzz.fizzBuzz(5);
+        assertEquals(expectedOutput, methodOutput);
+    }
 }
