@@ -21,9 +21,16 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void printOneWhenInputIsOne() {
+    public void printOutputWhenInputIsOne() {
         List<String> expectedOutput = Arrays.asList("1");
         List<String> methodOutput = fizzBuzz.fizzBuzz(1);
+        assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void printOutputWhenInputIsThree() {
+        List<String> expectedOutput = Arrays.asList("1", "2", "fizz");
+        List<String> methodOutput = fizzBuzz.fizzBuzz(3);
         assertEquals(expectedOutput, methodOutput);
     }
 }
